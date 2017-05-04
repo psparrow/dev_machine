@@ -7,6 +7,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("f04122bbc305a202967fa1838e20ff741455307c2ae80a26035fbf5d637e325f" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" default)))
  '(package-selected-packages
    (quote
     (monokai-theme column-marker markdown-preview-eww color-theme-solarized rvm ruby-electric rinari markdown-mode bubbleberry-theme))))
@@ -19,7 +22,9 @@
 
 (rvm-use-default)
 
+(require 'rinari)
 (add-hook 'ruby-mode-hook (lambda () (interactive) (column-marker-1 80)))
+(add-hook 'ruby-mode-hook 'rinari-minor-mode)
 
 (add-to-list 'auto-mode-alist '("\\html.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
@@ -33,7 +38,8 @@
 (setq web-mode-indent-style 2)
 
 (load-theme 'bubbleberry t)
-;;(load-theme 'rubytapas t)
+;;(load-theme 'zweilight t)
+;;(load-theme 'paganini t)
 
 ;; Color schemes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
