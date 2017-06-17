@@ -37,12 +37,14 @@
 (setq web-mode-code-indent-offset 2)
 (setq web-mode-indent-style 2)
 
-(load-theme 'bubbleberry t)
+;; Color schemes
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
+;;(load-theme 'bubbleberry t)
+(load-theme 'rubytapas t)
 ;;(load-theme 'zweilight t)
 ;;(load-theme 'paganini t)
 
-;; Color schemes
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 ;; Add line numbers
 (require 'linum)
